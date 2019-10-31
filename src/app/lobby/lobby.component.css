@@ -3,9 +3,7 @@
   overflow:hidden;
   display: flex;
   flex-direction: column;
-  /* text-align: center; */
   justify-content:center;
-  /* align-content:center; */
 
   background-color: #4285f4;
   color: #fff;
@@ -44,7 +42,7 @@ button {
   color: white;
 }
 .users li:hover {
-  color: #607D8B;
+  color: #4285f4;
   background-color: #DDD;
 }
 .users .text {
