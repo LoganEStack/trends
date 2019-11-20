@@ -9,8 +9,13 @@ let io = socketIO(server);
 
 const port = process.env.PORT || 3000;
 
+var players = {};
+
 io.on('connection', (socket) => {
-    console.log('user connected');
+    console.log('user connected: ' + socket.id);
+    // socket.on('new player', function() {
+    // players[socket.id] = username;
+    // });
 });
 
 server.listen(port, () => {

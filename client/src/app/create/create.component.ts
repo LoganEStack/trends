@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-//import { AppService } from '../app.service';
+import { AppService } from '../app.service';
 
 
 @Component({
@@ -9,15 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateComponent implements OnInit {
 
+  private roomNumber = <Number> 0;
+
   constructor(
-    //private appService: AppService
+    private appService: AppService
   ) {
   }
 
   ngOnInit() {
+    console.log("ngOnInit called");
     // connect the player to the socket
 		//this.appService.connectSocket();
-    //console.log("Hello");
   }
+
+  createRoom() {
+    console.log('createRoom() called');
+		this.appService.createNewRoom().subscribe( (response) => {
+			this.roomNumber = response.roomNumber;
+		});
+	}
 
 }

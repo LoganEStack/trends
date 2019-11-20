@@ -47,7 +47,7 @@ export class AppComponent implements OnInit {
 	private playedText = <string>'';
 	private whoseTurn = 'X';
 	/*socket related Variable,ng-models and constant starts*/
-  
+
 	constructor(
 		private _renderer: Renderer,
 		private modalService: NgbModal,

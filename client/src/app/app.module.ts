@@ -11,7 +11,7 @@ import { LobbyComponent } from './lobby/lobby.component';
 import { ScoreComponent } from './score/score.component';
 
 import { HttpClientModule } from '@angular/common/http';
-
+import { AppService } from './app.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
 
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
