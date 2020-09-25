@@ -15,6 +15,7 @@ export class AppService {
     constructor() {
         this.socket = io(this.url);
     }
+    
 
     /* Const and variable for SocketEvent and HTTP call ends. */
     // constructor(private http: HttpClient) {}

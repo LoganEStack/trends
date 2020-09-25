@@ -13,17 +13,14 @@ export class CreateComponent implements OnInit {
 
   constructor(
     private appService: AppService
-  ) {
-  }
+  ) {}
 
   ngOnInit() {
-    console.log("ngOnInit called");
     // connect the player to the socket
 		//this.appService.connectSocket();
   }
 
   createRoom() {
-    console.log('createRoom() called');
 		this.appService.createNewRoom().subscribe( (response) => {
 			this.roomNumber = response.roomNumber;
 		});
